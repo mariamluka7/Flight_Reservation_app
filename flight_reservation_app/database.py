@@ -1,9 +1,6 @@
 # SQLite database connection and setup
 import sqlite3
 
-# connect to database file and create cursor
-# conn = sqlite3.connect('flights.db')
-# c = conn.cursor()
 
 #----------- Create Table-----------------
 # c.execute("""
@@ -34,7 +31,7 @@ def show_all():
     conn.close()
 #--------------------------------------------------------
 
-# Adding a new reservation
+# Add a new reservation
 def add_reserevation(name,fnum,dep,dest,dt,stnum):
     # connect to database file and create cursor
     conn = sqlite3.connect('flights.db')
@@ -63,12 +60,43 @@ def delete_reservation(id):
     conn.close()
 #------------------------------------------------------------
 
+# Flight search
+def flight_search(keyword):
+    # connect to database file and create cursor
+    conn = sqlite3.connect('flights.db')
+    c = conn.cursor()
+    # making the user able to search using any detail about the flight using OR 
+    c.execute("""
+                SELECT * FROM flights WHERE name LIKE ?
+                OR flight_number LIKE ?
+                OR departure LIKE ?
+                OR destination LIKE ?
+                OR date LIKE ?
+                OR seat_number LIKE ? 
+            """,([f'%{keyword}%']*6)
+            )
+    flights = c.fetchall()
+    if not flights :
+        print('No Flights Found')
+    else:
+        for flight in flights:
+            print(flight)
+
+    # Commit and close connection
+    conn.commit()
+    conn.close()
+#------------------------------------------------------
+
+# Update flights
+def update_flight(x):
+    return 
 
 # Testing database functions
 
-#add_reserevation('Mari','A66','chilli','tokyo','20-8-2025','17F')
+#add_reserevation('roma','B6','alex','tokyo','20-10-2025','7F')
 #delete_reservation(2)
-
+flight_search('ro')
+print('---------------------')
 show_all()
 
 
@@ -77,6 +105,3 @@ show_all()
 
 
 
-# Commit and close connection
-# conn.commit()
-# conn.close()
