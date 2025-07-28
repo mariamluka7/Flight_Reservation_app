@@ -3,7 +3,7 @@ from tkinter import *
 import customtkinter as ctk
 from PIL import ImageTk,Image
 
-def create_booking_page(root):
+def create_booking_page(root,go_home,go_booking,go_view):
 
     book = ctk.CTkFrame(root,fg_color='#F4F9F9')
 
@@ -17,28 +17,17 @@ def create_booking_page(root):
     home_lbl = ctk.CTkLabel(top_strip,text='Home',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     home_lbl.place(x=1100,y=30)
 
-    def go_home(event):
-        print('home page!!') 
-        book.tkraise()
-
-    home_lbl.bind('<Button-1>',go_home)
+    home_lbl.bind('<Button-1>',lambda event:go_home())
     #------
     booking_lbl = ctk.CTkLabel(top_strip,text='Book Flight',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     booking_lbl.place(x=1200,y=30)
 
-    def go_booking(event=None):
-        print('booking page !!') 
-
-    booking_lbl.bind('<Button-1>',go_booking)
+    booking_lbl.bind('<Button-1>',lambda event:go_booking())
     #------
     viewReserv_lbl = ctk.CTkLabel(top_strip,text='View Reservations',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     viewReserv_lbl.place(x=1330,y=30)
 
-    def go_view(event=None):
-        print('viewing page !!') 
-        book.tkraise() 
-
-    viewReserv_lbl.bind('<Button-1>',go_view)
+    viewReserv_lbl.bind('<Button-1>',lambda event:go_view())
 
     testlbl = ctk.CTkLabel(book,text='booking page!')
     testlbl.place(relx=0.5,rely=0.5) 

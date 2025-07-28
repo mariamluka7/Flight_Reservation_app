@@ -21,16 +21,26 @@ root.after(10,maxi)
 
 root.update_idletasks() 
 
-view_page = reservations.create_view_page(root)
-booking_page = booking.create_booking_page(root)
-home_page = home.create_home_page(root) 
+view_page = reservations.create_view_page(root, lambda:home_page.tkraise(),
+                                                lambda:booking_page.tkraise(),
+                                                lambda:view_page.tkraise()
+                                            )
 
+booking_page = booking.create_booking_page(root,lambda:home_page.tkraise(),
+                                                lambda:booking_page.tkraise(),
+                                                lambda:view_page.tkraise()
+                                            )
+
+home_page = home.create_home_page(root, lambda:home_page.tkraise(),
+                                        lambda:booking_page.tkraise(),
+                                        lambda:view_page.tkraise()
+                                    ) 
 
 pages = [home_page,view_page,booking_page] 
 for page in pages:
     page.place(relwidth=1,relheight=1)
 
-booking_page.tkraise() 
+home_page.tkraise() 
 
 
 root.mainloop()

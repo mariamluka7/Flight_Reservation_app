@@ -35,43 +35,44 @@ import reservations
 #     page.place(relwidth=1,relheight=1)
 
 
-def create_home_page(root):
+def create_home_page(root,go_home,go_booking,go_view):
 
     home = ctk.CTkFrame(root,fg_color='#F4F9F9')
 
+    # creating upper navigation strip--------------------------------------------
     top_strip =ctk.CTkFrame(home,height=80,fg_color='#756AB6',corner_radius=0)
     top_strip.pack(fill='x',side='top') 
 
     app_title = ctk.CTkLabel(top_strip,text='ROMA Reservations ✨',text_color='#F2FCFC',bg_color="#756AB6",font=("Segoe UI",28,'bold'))
     app_title.place(x=50,y=20)
 
-    #-------creating navigation button in strip------------------------------------
+    #creating navigation button in strip
     home_lbl = ctk.CTkLabel(top_strip,text='Home',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     home_lbl.place(x=1100,y=30)
 
-    def go_home(event):
-        print('home page!!') 
-        home.tkraise()
+    # def go_home(event):
+    #     print('home page!!') 
+    #     home.tkraise()
 
-    home_lbl.bind('<Button-1>',go_home)
+    home_lbl.bind('<Button-1>',lambda event:go_home())
     #------
     booking_lbl = ctk.CTkLabel(top_strip,text='Book Flight',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     booking_lbl.place(x=1200,y=30)
 
-    def go_booking(event=None):
-        
-        print('booking page !!') 
+    # def go_booking(event=None):
 
-    booking_lbl.bind('<Button-1>',go_booking)
+    #     print('booking page !!') 
+
+    booking_lbl.bind('<Button-1>',lambda event:go_booking())
     #------
     viewReserv_lbl = ctk.CTkLabel(top_strip,text='View Reservations',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     viewReserv_lbl.place(x=1330,y=30)
 
-    def go_view(event=None):
-        print('viewing page !!') 
-        reservations.create_view_page(root).tkraise() 
+    # def go_view(event=None):
+    #     print('viewing page !!') 
+    #     reservations.create_view_page(root).tkraise() 
 
-    viewReserv_lbl.bind('<Button-1>',go_view)
+    viewReserv_lbl.bind('<Button-1>',lambda event:go_view())
 
     #------------------widgets for navigation in home page----------------------------
     wlcm_lbl = ctk.CTkLabel(home,text='Welcome to ROMA Reservations',text_color='#645CAA',font=('Segoe UI',42,'bold'))
