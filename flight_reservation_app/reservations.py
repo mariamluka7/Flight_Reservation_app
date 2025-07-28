@@ -17,7 +17,6 @@ def create_view_page(root,go_home,go_booking,go_view):
     home_lbl = ctk.CTkLabel(top_strip,text='Home',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     home_lbl.place(x=1100,y=30)
 
-
     home_lbl.bind('<Button-1>',lambda event:go_home())
     #------
     booking_lbl = ctk.CTkLabel(top_strip,text='Book Flight',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')

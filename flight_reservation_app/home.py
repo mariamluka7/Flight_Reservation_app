@@ -3,8 +3,6 @@ from tkinter import *
 import customtkinter as ctk
 from PIL import ImageTk,Image
 
-
-
 def create_home_page(root,go_home,go_booking,go_view):
 
     home = ctk.CTkFrame(root,fg_color='#F4F9F9')
@@ -20,27 +18,15 @@ def create_home_page(root,go_home,go_booking,go_view):
     home_lbl = ctk.CTkLabel(top_strip,text='Home',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     home_lbl.place(x=1100,y=30)
 
-    # def go_home(event):
-    #     print('home page!!') 
-    #     home.tkraise()
-
     home_lbl.bind('<Button-1>',lambda event:go_home())
     #------
     booking_lbl = ctk.CTkLabel(top_strip,text='Book Flight',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
-    booking_lbl.place(x=1200,y=30)
-
-    # def go_booking(event=None):
-
-    #     print('booking page !!') 
+    booking_lbl.place(x=1200,y=30) 
 
     booking_lbl.bind('<Button-1>',lambda event:go_booking())
     #------
     viewReserv_lbl = ctk.CTkLabel(top_strip,text='View Reservations',text_color='#F2FCFC',font=('Segoe UI',18),cursor='hand2',bg_color='#756AB6')
     viewReserv_lbl.place(x=1330,y=30)
-
-    # def go_view(event=None):
-    #     print('viewing page !!') 
-    #     reservations.create_view_page(root).tkraise() 
 
     viewReserv_lbl.bind('<Button-1>',lambda event:go_view())
 
@@ -95,13 +81,10 @@ def create_home_page(root,go_home,go_booking,go_view):
 
     book_btn.place(relx=0.5,rely=0.85,anchor='center')
 
-
-
     # to ensure the color changing effect is applied when mouse hovers on any widget in the frame
     for widget in book_frame.winfo_children():
         widget.bind('<Enter>',on_enterbook)
         widget.bind('<Leave>',on_leavebook)
-
 
     #--- VIEW RESERVATIONS frame with button and symbol--------------
     viewing_frame = ctk.CTkFrame(home,width=450,height=300,corner_radius=10,border_width=2,border_color='#756AB6',fg_color='white')
