@@ -1,0 +1,11 @@
+# Required Python libraries
+tkinter
+customtkinter
+PIL 
+tkinter.messagebox
+tkcalendar
+sqlite3 
+pyinstaller 
+sys
+os
+shutil 
