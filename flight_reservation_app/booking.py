@@ -43,36 +43,36 @@ def create_booking_page(root,go_home,go_booking,go_view):
                                 border_color='#756AB6',border_width=2)
     inputs_frame.place(relx=0.3,rely=0.59,anchor='w')
 
-    name_field = ctk.CTkEntry(inputs_frame,placeholder_text='Enter your full name',width=550,height=37,
-                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    name_field = ctk.CTkEntry(inputs_frame,placeholder_text='Enter your full name',placeholder_text_color='gray',width=550,height=37,
+                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black')
     name_field.place(relx=0.5,rely=0.15,anchor='center') 
 
     namelbl = ctk.CTkLabel(inputs_frame,text='Full Name',text_color='black',font=('Segoe UI',16))
     namelbl.place(relx=0.04,rely=0.043)
 
-    flnum_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. FS123',width=550,height=37,
-                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    flnum_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. FS123',placeholder_text_color='gray',width=550,height=37,
+                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black')
     flnum_field.place(relx=0.5,rely=0.35,anchor='center') 
 
     flnumlbl = ctk.CTkLabel(inputs_frame,text='Flight Number',text_color='black',font=('Segoe UI',16))
     flnumlbl.place(relx=0.04,rely=0.24)
 
-    dep_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. Cairo',width=260,height=37,
-                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    dep_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. Cairo',placeholder_text_color='gray',width=260,height=37,
+                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black')
     dep_field.place(relx=0.046,rely=0.5)
 
     deplbl = ctk.CTkLabel(inputs_frame,text='Departure',text_color='black',font=('Segoe UI',16))
     deplbl.place(relx=0.04,rely=0.43)
 
-    dest_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. London',width=260,height=37,
-                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    dest_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. London',placeholder_text_color='gray',width=260,height=37,
+                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black')
     dest_field.place(relx=0.52,rely=0.5)
 
     destlbl = ctk.CTkLabel(inputs_frame,text='Destination',text_color='black',font=('Segoe UI',16))
     destlbl.place(relx=0.515,rely=0.43)
 
-    stnum_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. 7A',width=260,height=37,
-                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    stnum_field = ctk.CTkEntry(inputs_frame,placeholder_text='e.g. 7A',placeholder_text_color='gray',width=260,height=37,
+                              fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black')
     stnum_field.place(relx=0.52,rely=0.69)
 
     stnumlbl = ctk.CTkLabel(inputs_frame,text='Seat Number',text_color='black',font=('Segoe UI',16))
@@ -80,7 +80,7 @@ def create_booking_page(root,go_home,go_booking,go_view):
 
     sel_date = ctk.StringVar(value='Select a Date')
 
-    date_field = ctk.CTkLabel(inputs_frame,textvariable=sel_date,width=200,height=37,
+    date_field = ctk.CTkLabel(inputs_frame,textvariable=sel_date,text_color='black',width=200,height=37,
                               fg_color='#DCDCDC',corner_radius=10)
     date_field.place(relx=0.046,rely=0.69)
 

@@ -18,7 +18,7 @@ def edit_window(frame,db_id,data,resfresh):
 
     entries = []
 
-    name_field = ctk.CTkEntry(edit_frame,width=550,height=37,
+    name_field = ctk.CTkEntry(edit_frame,width=550,height=37,text_color='black',
                               fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
     name_field.insert(0,data[2])
     name_field.place(relx=0.5,rely=0.15,anchor='center') 
@@ -27,7 +27,7 @@ def edit_window(frame,db_id,data,resfresh):
     namelbl = ctk.CTkLabel(edit_frame,text='Full Name',text_color='black',font=('Segoe UI',16))
     namelbl.place(relx=0.04,rely=0.043)
 
-    flnum_field = ctk.CTkEntry(edit_frame,width=550,height=37,
+    flnum_field = ctk.CTkEntry(edit_frame,width=550,height=37,text_color='black',
                               fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
     flnum_field.insert(0,data[1])
     flnum_field.place(relx=0.5,rely=0.35,anchor='center') 
@@ -36,7 +36,7 @@ def edit_window(frame,db_id,data,resfresh):
     flnumlbl = ctk.CTkLabel(edit_frame,text='Flight Number',text_color='black',font=('Segoe UI',16))
     flnumlbl.place(relx=0.04,rely=0.24)
 
-    dep_field = ctk.CTkEntry(edit_frame,width=260,height=37,
+    dep_field = ctk.CTkEntry(edit_frame,width=260,height=37,text_color='black',
                               fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
     dep_field.insert(0,data[3])
     dep_field.place(relx=0.046,rely=0.5)
@@ -45,7 +45,7 @@ def edit_window(frame,db_id,data,resfresh):
     deplbl = ctk.CTkLabel(edit_frame,text='Departure',text_color='black',font=('Segoe UI',16))
     deplbl.place(relx=0.04,rely=0.43)
 
-    dest_field = ctk.CTkEntry(edit_frame,width=260,height=37,
+    dest_field = ctk.CTkEntry(edit_frame,width=260,height=37,text_color='black',
                               fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
     dest_field.insert(0,data[4])
     dest_field.place(relx=0.52,rely=0.5)
@@ -54,7 +54,7 @@ def edit_window(frame,db_id,data,resfresh):
     destlbl = ctk.CTkLabel(edit_frame,text='Destination',text_color='black',font=('Segoe UI',16))
     destlbl.place(relx=0.515,rely=0.43)
 
-    stnum_field = ctk.CTkEntry(edit_frame,width=260,height=37,
+    stnum_field = ctk.CTkEntry(edit_frame,width=260,height=37,text_color='black',
                               fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
     stnum_field.insert(0,data[6])
     stnum_field.place(relx=0.52,rely=0.69)
@@ -65,7 +65,7 @@ def edit_window(frame,db_id,data,resfresh):
 
     sel_date = ctk.StringVar(value=data[5])
 
-    date_field = ctk.CTkLabel(edit_frame,textvariable=sel_date,width=200,height=37,
+    date_field = ctk.CTkLabel(edit_frame,textvariable=sel_date,width=200,height=37,text_color='black',
                               fg_color='#DCDCDC',corner_radius=10)
     date_field.place(relx=0.046,rely=0.69)
     entries.append(sel_date) 

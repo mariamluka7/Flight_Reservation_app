@@ -46,7 +46,7 @@ def create_home_page(root,go_home,go_booking,go_view):
     wlcm_lbl.place(relx=0.5,rely=0.2,anchor='center')
     #--------
     info_lbl = ctk.CTkLabel(home,text='Book your flights and manage your reservations with our simple and intuitive system.',
-                            font=('Segoe UI',20))
+                            font=('Segoe UI',20),text_color='black') 
     info_lbl.configure(wraplength=600)
     info_lbl.place(relx=0.5,rely=0.3,anchor='center')
     #-------
@@ -72,7 +72,7 @@ def create_home_page(root,go_home,go_booking,go_view):
     book_text1.place(relx=0.5,rely=0.4,anchor='center')
 
     book_text2 = ctk.CTkLabel(book_frame,text='Reserve your next flight by providing your details and flight information.',
-                            font=('Segoe UI',18))
+                            font=('Segoe UI',18),text_color='black') 
     book_text2.configure(wraplength=400)
     book_text2.place(relx=0.5,rely=0.6,anchor='center')
 
@@ -118,7 +118,7 @@ def create_home_page(root,go_home,go_booking,go_view):
     view_text1.place(relx=0.5,rely=0.4,anchor='center')
 
     view_text2 = ctk.CTkLabel(viewing_frame,text='Manage your existing reservations, view details, edit or cancel if needed.',
-                            font=('Segoe UI',18))
+                            font=('Segoe UI',18),text_color='black') 
     view_text2.configure(wraplength=400)
     view_text2.place(relx=0.5,rely=0.6,anchor='center')
 

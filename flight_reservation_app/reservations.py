@@ -94,12 +94,12 @@ def create_view_page(root,go_home,go_booking,go_view):
             tree.insert('','end',iid=str(res[0]),values=res) 
 
 
-    search_field = ctk.CTkEntry(view,placeholder_text='Search reservations...',height=37,width=260,
-                                fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2)
+    search_field = ctk.CTkEntry(view,placeholder_text='Search reservations...',placeholder_text_color='gray',height=37,width=260,
+                                fg_color='#F4F9F9',border_color="#DCDCDC",border_width=2,text_color='black') 
     search_field.place(relx=0.55,rely=0.22)
 
     info_lbl2 = ctk.CTkLabel(view,text='To edit or delete reservations, click on the required reservation from the shown table.',
-                            font=('Segoe UI', 14))
+                            font=('Segoe UI', 14),text_color='black') 
     info_lbl2.configure(wraplength=250)
     info_lbl2.place(relx=0.02,rely=0.5) 
 
