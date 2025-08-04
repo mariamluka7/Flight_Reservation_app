@@ -16,7 +16,7 @@ def resource_path(relative_path):
     return os.path.join(base_path,relative_path) 
 #----------------------------------------------------------
 
-ctk.set_appearance_mode("system")      # Options: "dark", "light", "system"
+ctk.set_appearance_mode("light")      # Options: "dark", "light", "system"
 ctk.set_default_color_theme("blue")  # Also "green", "dark-blue", or your own JSON theme
 
 root = ctk.CTk()
